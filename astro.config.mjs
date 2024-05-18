@@ -1,7 +1,10 @@
 import { defineConfig } from 'astro/config';
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://ooorange777.github.io',
-    base: '/notomorrow_club_astro',
+  site: 'https://ooorange777.github.io',
+  base: '/',
+  integrations: [tailwind()]
 });

@@ -1,41 +1,31 @@
 ---
 import Banner from '../components/banner.astro';
 import Navbar from '../components/navbar.astro';
-import Profile from '../components/profile.astro';
-import Notes from '../components/notes.astro';
+const { pageTitle } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html data-theme="garden" lang="zh-cn">
     <head>
     	<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/safari-pinned-tab.svg" />
-        <title>No Tomorrow Club</title>
+        <title>{pageTitle} :: No Tomorrow Club</title>
         <meta name="generator" content={Astro.generator} />
     </head>
     <body class="box-border mx-0 my-0 bg-base-100">
         <div class="mx-10 my-5 grid grid-cols-3 gap-10">
-			<!-- MAIN BODY -->
             <!-- BANNER -->
     		<Banner />
+			<!-- MAIN BODY -->
 			<div id="main" class="col-span-2">
 				<!-- NAVBAR -->
 				<Navbar />
-				<!-- 书影音 -->
-
-				<!-- 留言板 -->
-
 			</div>
       		<!-- SIDE BAR -->
       		<div id="sidebar">
 				<div class="grid grid-flow-row">
-					<!-- 个人简介 -->
-					<Profile />				
-					<!-- 我的广播 -->
-					<Notes />
-					<!-- 我的关注 -->
-					
-					<!-- FOOTER -->
+                    <slot />
 				</div>
 			</div>
         </div>
