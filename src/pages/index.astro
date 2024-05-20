@@ -1,81 +1,132 @@
-<!DOCTYPE html>
+---
+import '../styles/note.css';
+---
+<!doctype html>
 <html data-theme="garden" lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/safari-pinned-tab.svg" />
+    <title>No Tomorrow Club</title>
+    <meta name="generator" content={Astro.generator} />
+    <script
+      src="https://v1.hitokoto.cn/?c=a&c=b&c=c&c=d&c=h&c=k&encode=js&select=%23hitokoto"
+      defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="/safari-pinned-tab.svg" />
-  <title>No Tomorrow Club</title>
-  <meta name="generator" content={Astro.generator} />
-<script src="https://v1.hitokoto.cn/?c=a&c=b&c=c&c=d&c=h&c=k&encode=js&select=%23hitokoto" defer></script>
-</head>
-
-<body class="box-border mx-0 my-0 bg-base-100">
-  <div class="container mx-auto font-serif">
-    <!-- BANNER -->
-    <div id="banner" class="min-h-32 mt-10 pt-10">
-      <div class="grid grid-rows-2 relative items-center">
-        <div id="title" class="absolute text-4xl font-bold text-accent">NO<br />TOMORROW<br />CLUB</div>
-        <div id="subtitle" class="z-1 absolute text-3xl text-secondary-content">Tomorrow Will Never Come</div>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 gap-10 text-sm">
-      <!-- MAIN BODY -->
-      <div id="main" class="col-span-2">
-        <!-- NAVBAR -->
-<div class="flex flex-row">
-<img src="/ed.jpg" alt="avater" class="size-10" />
-<div class="flex flex-col">
-<div class="text-lg font-bold text-nowrap ml-2">OOORANGE</div>
-<div class="text-xs text-wrap ml-2 mb-2 text-secondary/80"><span>此刻一言：「</span><span id="hitokoto"></span><span>」</span></div>
-</div>
-</div>
-        <div id="navbar" class="grid grid-flow-col auto-cols-max gap-10 ml-12">
-          <a href="/" class="hover:text-primary">首页</a>
-          <a href="/blog/" class="hover:text-primary">日记</a>
-          <a href="/list/" class="hover:text-primary">列表</a>
-          <a href="/photo/" target="_blank" class="hover:text-primary">相册</a>
-          <a href="https://library.notomorrow.club/" target="_blank" class="hover:text-primary">图书馆</a>
-        </div>
-        <!-- 书影音 -->
-
-        <!-- 留言板 -->
-
-      </div>
-      <!-- SIDE BAR -->
-      <div id="sidebar" class="max-w-min">
-        <div class="grid grid-flow-row">
-          <!-- 个人简介 -->
-          <div class="grid grid-flow-col auto-cols-auto place-items-start justify-start bg-base-200">
-            <img src="/ed.jpg" alt="avater" class="mx-2 my-2 size-36" />
-            <div class="text-nowrap text-secondary my-2 mx-5">
-              <div>常居：茶水间</div>
-              <div>ooorange</div>
-              <div>加入时间：2021-06-26</div>
-            </div>
+  <body class="box-border mx-0 my-0 bg-base-100">
+    <div class="container mx-auto font-serif">
+      <!-- BANNER -->
+      <div id="banner" class="min-h-32 mt-10 pt-10">
+        <div class="grid grid-rows-2 relative items-center">
+          <div id="title" class="absolute text-4xl font-bold text-accent">
+            NO<br />TOMORROW<br />CLUB
           </div>
-
-          <div class="pl-2 py-2 bg-base-200">普通社畜，三分钟热度</div>
-          <!-- 我的广播 -->
-          <script src="https://gist.github.com/ooorange777/316c1f498bc069d7e4ba4668f34d3ff9.js"></script>
-          <div class="my-2 mastodon_design bg-base-100">
-            <div class="ns-container">
-              <ins data-title="ooorange的广播" data-acct="juju@f.jymuoyu.com" data-limit="10" data-nocss="1"></ins>
-            </div>
+          <div
+            id="subtitle"
+            class="z-1 absolute text-3xl text-secondary-content"
+          >
+            Tomorrow Will Never Come
           </div>
-          <!-- 我的关注 -->
-
         </div>
       </div>
-    </div>
-    <!-- FOOTER -->
-    <footer class="grid grid-flow-col justify-between text-xs text-neutral/50 p-2 border-dashed border-t border-base-300">
-      <div>© 2021-2024 No Tomorrow Club</div>
-      <div>Powered by <a href="https://astro.build/" target="_blank" class="text-info/75 underline">Astro</a>, <a href="https://www.tailwindcss.com/" target="_blank" class="text-info/75 underline">Tailwind</a> & <a href="https://daisyui.com/" target="_blank" class="text-info/75 underline">DaisyUI</a></div>
-      <div><a href="/about/" class="mx-5">关于本站</a> 联系我: <a href="https://matrix.to/#/@juju:jymuoyu.com/" target="_blank" class="text-info/75 underline mx-1">Matrix</a> <a href="mailto:juju@gmail.com" target="_blank" class="text-info/75 underline">邮箱</a></div>
-    </footer>
-  </div>
-</body>
 
+      <div class="grid grid-cols-3 gap-10 text-sm">
+        <!-- MAIN BODY -->
+        <div id="main" class="col-span-2">
+          <!-- NAVBAR -->
+          <div class="flex flex-row">
+            <img src="/ed.jpg" alt="avater" class="size-10" />
+            <div class="flex flex-col">
+              <div class="text-lg font-bold text-nowrap ml-2">OOORANGE</div>
+              <div class="text-xs text-wrap ml-2 mb-2 text-secondary/80">
+                <span>此刻一言：「</span><span id="hitokoto"></span><span
+                  >」</span>
+              </div>
+            </div>
+          </div>
+          <div
+            id="navbar"
+            class="grid grid-flow-col auto-cols-max gap-10 ml-12"
+          >
+            <a href="/" class="hover:text-primary">首页</a>
+            <a href="/blog/" class="hover:text-primary">日记</a>
+            <a href="/list/" class="hover:text-primary">列表</a>
+            <a href="/photo/" target="_blank" class="hover:text-primary">相册</a
+            >
+            <a
+              href="https://library.notomorrow.club/"
+              target="_blank"
+              class="hover:text-primary">图书馆</a
+            >
+          </div>
+          <!-- 书影音 -->
+
+          <!-- 留言板 -->
+        </div>
+        <!-- SIDE BAR -->
+        <div id="sidebar" class="max-w-fit">
+          <div class="grid grid-flow-row">
+            <!-- 个人简介 -->
+            <div
+              class="grid grid-flow-col auto-cols-auto place-items-start justify-start bg-base-200"
+            >
+              <img src="/ed.jpg" alt="avater" class="mx-2 my-2 size-36" />
+              <div class="text-nowrap text-secondary my-2 mx-5">
+                <div>常居：茶水间</div>
+                <div>ooorange</div>
+                <div>加入时间：2021-06-26</div>
+              </div>
+            </div>
+
+            <div class="pl-2 py-2 bg-base-200">普通社畜，三分钟热度</div>
+            <!-- 我的广播 -->
+            <script src="../js/notestock.js"></script>
+            <div class="my-2 mastodon_design bg-base-100">
+              <div class="ns-container">
+                <ins
+                  data-title="ooorange的广播"
+                  data-acct="juju@f.jymuoyu.com"
+                  data-limit="10"
+                  data-nocss="1"></ins>
+              </div>
+            </div>
+
+            <!-- 我的关注 -->
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <footer
+        class="grid grid-flow-col justify-between text-xs text-neutral/50 p-2 border-dashed border-t border-base-300"
+      >
+        <div>© 2021-2024 No Tomorrow Club</div>
+        <div>
+          Powered by <a
+            href="https://astro.build/"
+            target="_blank"
+            class="text-info/75 underline">Astro</a
+          >, <a
+            href="https://www.tailwindcss.com/"
+            target="_blank"
+            class="text-info/75 underline">Tailwind</a
+          > & <a
+            href="https://daisyui.com/"
+            target="_blank"
+            class="text-info/75 underline">DaisyUI</a>
+        </div>
+        <div>
+          <a href="/about/" class="mx-5">关于本站</a> 联系我: <a
+            href="https://matrix.to/#/@juju:jymuoyu.com/"
+            target="_blank"
+            class="text-info/75 underline mx-1">Matrix</a
+          >
+          <a
+            href="mailto:juju@gmail.com"
+            target="_blank"
+            class="text-info/75 underline">邮箱</a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
