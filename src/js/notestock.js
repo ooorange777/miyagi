@@ -103,7 +103,7 @@ var notestock = notestock || {};
                 "view?q=" +
                 encodeURIComponent(target.getAttribute("data-keyword"));
             }
-            titleframe.innerHTML = `<div class="ns-title"><a href="${title_url}" target="_blank" rel="noopener">${target.getAttribute("data-title")}</a></div>`;
+            titleframe.innerHTML = `<div class="ns-title">${target.getAttribute("data-title")}</div>`;
             titleset = true;
           }
           let obj = document.createElement("div");
@@ -111,12 +111,9 @@ var notestock = notestock || {};
           let published = new Date(status.published);
           let html = `<div class="ns-avatar">`;
           if (status.account.icon_url)
-            html =
-              html +
-              `<div><img src="https://img.osa-p.net/proxy/96,q100,s${status.account.icon_hash}/${status.account.icon_url}" class="ns-icon" alt="icon" onerror="this.onerror = null;this.setAttribute('src', '${status.account.icon_url}');"></div>`;
           html =
             html +
-            `<div><span class="ns-avatarname">${status.account.username ? status.account.username.replaceCustomEmoji(status.account.tag) : status.account.display_name}</span><div class="ns-subject">@${status.account.subject}</div></div></div>`;
+            `<div><span class="ns-avatarname">OOORANGE说：</span></div></div>`;
           if (status.summary)
             html =
               html +
@@ -152,7 +149,7 @@ var notestock = notestock || {};
           }
           html =
             html +
-            `</div><time class="ns-published"><a href="${status.url ? status.url : status.id}" target="_blank" rel="noopener">${published.toLocaleString()}</a></time>`;
+            `</div><time class="ns-published">${published.toLocaleString()}</time>`;
           obj.innerHTML = html;
           statusframe.appendChild(obj);
         });
