@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blog.notomorrow.club',
-  // base: '/notomorrow_club_astro',
+  site: 'https://ooorange777.github.io',
+  base: '/notomorrow_club_astro',
   integrations: [tailwind()]
 });
