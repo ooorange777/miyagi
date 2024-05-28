@@ -3,7 +3,7 @@ import "../styles/note.css";
 ---
 
 <!doctype html>
-<html data-theme="luxury" lang="zh-cn">
+<html data-theme="dim" lang="zh-cn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +40,7 @@ import "../styles/note.css";
             <img src="/ed.jpg" alt="avater" class="size-10" />
             <div class="flex flex-col">
               <div class="text-lg font-bold text-nowrap ml-2">OOORANGE</div>
-              <div class="text-xs text-wrap ml-2 mb-2 text-base-content/60">
+              <div class="text-xs text-nowrap ml-2 mb-2 text-secondary">
                 <span>此刻一言：「</span><span id="hitokoto"></span><span
                   >」</span
                 >
@@ -61,6 +61,9 @@ import "../styles/note.css";
               target="_blank"
               class="hover:text-primary">图书馆</a
             >
+            <button id="toggle" class="rounded-md border-primary border-2"
+              ><span class="p-1">日夜交替</span></button
+            >
           </div>
           <!-- 书影音 -->
 
@@ -74,7 +77,7 @@ import "../styles/note.css";
               class="grid grid-flow-col auto-cols-auto place-items-start justify-start bg-base-200"
             >
               <img src="/ed.jpg" alt="avater" class="mx-2 my-2 size-36" />
-              <div class="text-base-content/60 my-2 mx-2">
+              <div class="text-secondary my-2 mx-2">
                 <div>常居：茶水间</div>
                 <div>ooorange</div>
                 <div>加入时间：2021-06-26</div>
@@ -83,7 +86,6 @@ import "../styles/note.css";
 
             <div class="pl-2 py-2 bg-base-200">普通社畜，三分钟热度</div>
             <!-- 我的广播 -->
-            <script src="../js/notestock.js"></script>
             <div class="my-2 mastodon_design bg-base-100">
               <div class="ns-container">
                 <ins
@@ -102,7 +104,7 @@ import "../styles/note.css";
       <footer
         class="grid grid-flow-col justify-between text-xs text-base-content/50 p-2 border-dashed border-t border-base-300"
       >
-        <div>© 2021-2024 No Tomorrow Club</div>
+        <div>© 2021-2024 Notomorrow Club</div>
         <div>
           Powered by <a
             href="https://astro.build/"
@@ -133,4 +135,6 @@ import "../styles/note.css";
       </footer>
     </div>
   </body>
+  <script type="text/javascript" src="src/js/notestock.js"></script>
+  <script type="text/javascript" src="src/js/theme.js"></script>
 </html>

@@ -1,253 +1,242 @@
 .ns-frame {
-   --widget-width: 500px;
-   --widget-height: 500px;
-   --title-text-size: 1rem;
-   --title-padding-size: 20px;
-   --content-text-size: 0.875rem;
-   --content-padding-size: 1.25rem;
-   --icon-width: 36px;
-   --name-size: 0.875rem;
-}
-
-.ns-frame {
-   --n: oklch(24.1559% .049362 89.070594);
+  --widget-width: 500px;
+  --widget-height: 500px;
+  --title-text-size: 1rem;
+  --title-padding-size: 20px;
+  --content-text-size: 0.875rem;
+  --content-padding-size: 1.25rem;
+  --icon-width: 36px;
+  --name-size: 0.875rem;
 }
 
 .ns-container {
-   .ns-frame {
-      --bg-color: oklch(92.9519% .002163 17.197414);
-      --border-color: #c0cdd9;
-      --text-color: #282c37;
-      --name-text-color: #000;
-      --name-gray-color: #444b5d;
-      --time-text-color: #444b5d;
-      --spoiler-bg-color: #d9e1e8;
-      --spoiler-bg-hover-color: #ccd7e0;
-      --spoiler-text-color: #000;
-      --scrollbar-thumb-color: #ccd7e0;
-      --scrollbar-track-color: rgba(255, 255, 255, 0.1);
-      --p: oklch(45% .278 3.83636);
-   }
+  .ns-frame {
+    --border-color: #c0cdd9;
+    --spoiler-bg-color: #d9e1e8;
+    --spoiler-bg-hover-color: #ccd7e0;
+    --spoiler-text-color: #000;
+    --scrollbar-thumb-color: #ccd7e0;
+    --scrollbar-track-color: rgba(255, 255, 255, 0.1);
+    --p: oklch(45% 0.278 3.83636);
+  }
 
-   &.dark {
-      background: #191b22;
-      .ns-frame {
-         --bg-color: oklch(92.9519% .002163 17.197414);
-         --border-color: transparent;
-         --text-color: #fff;
-         --name-text-color: #fff;
-         --name-gray-color: #606984;
-         --time-text-color: #606984;
-         --spoiler-bg-color: #606984;
-         --spoiler-bg-hover-color: #707b97;
-         --spoiler-text-color: #282c37;
-         --scrollbar-thumb-color: #313543;
-         --scrollbar-track-color: rgba(0, 0, 0, 0.1);
-      }
-   }
+  &.dark {
+    background: #191b22;
+    .ns-frame {
+      --bg-color: oklch(92.9519% 0.002163 17.197414);
+      --border-color: transparent;
+      --text-color: #fff;
+      --name-text-color: #fff;
+      --name-gray-color: #606984;
+      --time-text-color: #606984;
+      --spoiler-bg-color: #606984;
+      --spoiler-bg-hover-color: #707b97;
+      --spoiler-text-color: #282c37;
+      --scrollbar-thumb-color: #313543;
+      --scrollbar-track-color: rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 .ns-frame {
-   ::-webkit-scrollbar {
-      width: 12px;
-      height: 12px;
-   }
-   ::-webkit-scrollbar-corner {
-      background: transparent;
-   }
-   ::-webkit-scrollbar-thumb {
-      background: var(--scrollbar-thumb-color);
-      border: none;
-      border-radius: 0;
-   }
-   ::-webkit-scrollbar-track {
-      border: 0 #fff;
-      border-radius: 0;
-      background: var(--scrollbar-track-color);
-   }
-   .emoji {
-      vertical-align: middle;
-      object-fit: contain;
-      max-width: 1em;
-      max-height: 1em;
-   }
-   a {
-      color: var(--n);
-      text-decoration: none;
-      &:hover {
-         text-decoration: underline;
-         color: var(--p);
-      }
-   }
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border: none;
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-track {
+    border: 0 #fff;
+    border-radius: 0;
+    background: var(--scrollbar-track-color);
+  }
+  .emoji {
+    vertical-align: middle;
+    object-fit: contain;
+    max-width: 1em;
+    max-height: 1em;
+  }
+  a {
+    color: var(--n);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: var(--p);
+    }
+  }
 
-   position: relative;
-   max-width: var(--widget-width);
-   height: var(--widget-height);
-   margin: auto;
-   background: var(--bg-color);
-   color: var(--text-color);
+  position: relative;
+  max-width: var(--widget-width);
+  height: var(--widget-height);
+  margin: auto;
+  background: var(--bg-color);
+  color: var(--text-color);
 
-   .ns-title {
-      padding: 0.5rem;
-      font-size: var(--title-text-size);
-      font-weight: 400;
-      line-height: 1.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      a {
-         color: oklch(56.2735% .054297 154.390187);
-      }
-   }
-   .ns-statusframe {
-      height: calc(
-         100% - var(--title-padding-size) * 2 - var(--title-text-size)
-      );
-      overflow: auto;
-      overflow-wrap: break-word;
-      scroll-snap-type: y proximity;
-      > div {
-         padding: var(--content-padding-size) var(--content-padding-size)
+  .ns-title {
+    padding: 0.5rem;
+    font-size: var(--title-text-size);
+    font-weight: 400;
+    line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    a {
+      color: oklch(56.2735% 0.054297 154.390187);
+    }
+  }
+  .ns-statusframe {
+    height: calc(100% - var(--title-padding-size) * 2 - var(--title-text-size));
+    overflow: auto;
+    overflow-wrap: break-word;
+    scroll-snap-type: y proximity;
+    > div {
+      padding: var(--content-padding-size) var(--content-padding-size)
+        var(--content-padding-size)
+        calc(
+          var(--content-padding-size) + var(--icon-width) +
             var(--content-padding-size)
-            calc(
-               var(--content-padding-size) + var(--icon-width) +
-                  var(--content-padding-size)
-            );
-         position: relative;
-         scroll-snap-align: start;
+        );
+      position: relative;
+      scroll-snap-align: start;
+    }
+    .ns-avatar {
+      display: flex;
+      .ns-icon {
+        position: absolute;
+        left: var(--content-padding-size);
+        top: var(--content-padding-size);
+        border-radius: 4px;
+        width: var(--icon-width);
       }
-      .ns-avatar {
-         display: flex;
-         .ns-icon {
-            position: absolute;
-            left: var(--content-padding-size);
-            top: var(--content-padding-size);
+      .ns-avatarname {
+        font-size: var(--name-size);
+        color: var(--name-text-color);
+        font-weight: 600;
+      }
+      .ns-subject {
+        font-size: 13px;
+        line-height: 18px;
+
+        color: var(--name-gray-color);
+      }
+    }
+    .ns-summary {
+      margin-top: 5px;
+      font-size: var(--content-text-size);
+      line-height: 1.5;
+      & + .ns-content {
+        display: none;
+      }
+      > span:last-child {
+        font-size: 0;
+        &:after {
+          content: "もっと見る";
+          background: var(--spoiler-bg-color);
+          color: var(--spoiler-text-color);
+          border-radius: 2px;
+          font-weight: 700;
+          font-size: 11px;
+          padding: 0 6px;
+          margin-left: 0.5em;
+          margin-top: 2px;
+        }
+        &:hover:after {
+          background: var(--spoiler-bg-hover-color);
+        }
+      }
+    }
+    .ns-content {
+      width: 100%;
+      margin-top: 5px;
+      p {
+        margin: 0;
+        font-size: var(--content-text-size);
+        line-height: 1.5;
+      }
+      .ns-attach {
+        > div {
+          margin-top: 5px;
+          display: block;
+          * {
+            max-width: 100%;
             border-radius: 4px;
-            width: var(--icon-width);
-         }
-         .ns-avatarname {
-            font-size: var(--name-size);
-            color: var(--name-text-color);
-            font-weight: 600;
-         }
-         .ns-subject {
-            font-size: 13px;
-            line-height: 18px;
+            vertical-align: bottom;
+          }
+        }
+      }
+      .ns-sensitive {
+        position: relative;
+        margin-top: 5px;
+        > span {
+          position: absolute;
+          background: rgba(0, 0, 0, 0.5);
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          font-size: 0;
+          border-radius: 4px;
+          &:after {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-color);
+            font-weight: 500;
+            content: "閲覧注意";
+            font-size: 1rem;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+          }
+        }
+        &.ns-contenthide .ns-attach {
+          max-height: 250px;
+          overflow: hidden;
+          > div {
+            filter: blur(5px);
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+    .ns-published {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 18px;
+      a {
+        color: var(--time-text-color);
+      }
+    }
+  }
 
-            color: var(--name-gray-color);
-         }
+  .ns-byframe {
+    position: absolute;
+    top: calc(var(--title-padding-size) + var(--title-text-size) + 2.5px);
+    right: var(--content-padding-size);
+    height: 1em;
+    font-size: 12px;
+    line-height: 1;
+    vertical-align: middle;
+    .ns-logo {
+      display: inline-block;
+      background: #fff;
+      padding: 1px 3px;
+      border-radius: 3px;
+      svg {
+        vertical-align: middle;
+        height: 12px;
       }
-      .ns-summary {
-         margin-top: 5px;
-         font-size: var(--content-text-size);
-         line-height: 1.5;
-         & + .ns-content {
-            display: none;
-         }
-         > span:last-child {
-            font-size: 0;
-            &:after {
-               content: "もっと見る";
-               background: var(--spoiler-bg-color);
-               color: var(--spoiler-text-color);
-               border-radius: 2px;
-               font-weight: 700;
-               font-size: 11px;
-               padding: 0 6px;
-               margin-left: 0.5em;
-               margin-top: 2px;
-            }
-            &:hover:after {
-               background: var(--spoiler-bg-hover-color);
-            }
-         }
-      }
-      .ns-content {
-         width: 100%;
-         margin-top: 5px;
-         p {
-            margin: 0;
-            font-size: var(--content-text-size);
-            line-height: 1.5;
-         }
-         .ns-attach {
-            > div {
-               margin-top: 5px;
-               display: block;
-               * {
-                  max-width: 100%;
-                  border-radius: 4px;
-                  vertical-align: bottom;
-               }
-            }
-         }
-         .ns-sensitive {
-            position: relative;
-            margin-top: 5px;
-            > span {
-               position: absolute;
-               background: rgba(0, 0, 0, 0.5);
-               top: 0;
-               right: 0;
-               bottom: 0;
-               left: 0;
-               z-index: 2;
-               font-size: 0;
-               border-radius: 4px;
-               &:after {
-                  position: absolute;
-                  background: rgba(0, 0, 0, 0.5);
-                  border-radius: 8px;
-                  padding: 8px 12px;
-                  color: var(--text-color);
-                  font-weight: 500;
-                  content: "閲覧注意";
-                  font-size: 1rem;
-                  top: 50%;
-                  left: 50%;
-                  transform: translateY(-50%) translateX(-50%);
-               }
-            }
-            &.ns-contenthide .ns-attach {
-               max-height: 250px;
-               overflow: hidden;
-               > div {
-                  filter: blur(5px);
-                  &:first-child {
-                     margin-top: 0;
-                  }
-               }
-            }
-         }
-      }
-      .ns-published {
-         display: block;
-         margin-top: 10px;
-         font-size: 13px;
-         line-height: 18px;
-         a {
-            color: var(--time-text-color);
-         }
-      }
-   }
-
-   .ns-byframe {
-      position: absolute;
-      top: calc(var(--title-padding-size) + var(--title-text-size) + 2.5px);
-      right: var(--content-padding-size);
-      height: 1em;
-      font-size: 12px;
-      line-height: 1;
-      vertical-align: middle;
-      .ns-logo {
-         display: inline-block;
-         background: #fff;
-         padding: 1px 3px;
-         border-radius: 3px;
-         svg {
-            vertical-align: middle;
-            height: 12px;
-         }
-      }
-   }
+    }
+  }
 }
