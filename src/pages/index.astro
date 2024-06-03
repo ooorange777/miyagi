@@ -3,7 +3,7 @@ import "../styles/note.css";
 ---
 
 <!doctype html>
-<html data-theme="dim" lang="zh-cn">
+<html data-theme="garden" lang="zh-cn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@ import "../styles/note.css";
   </head>
 
   <body class="box-border mx-0 my-0 bg-base-100">
-    <div class="container mx-auto font-serif">
+    <div class="container max-w-screen-lg mx-auto font-serif">
       <!-- BANNER -->
       <div id="banner" class="min-h-32 mt-10 pt-10">
         <div class="grid grid-rows-2 relative items-center">
@@ -66,6 +66,9 @@ import "../styles/note.css";
             >
           </div>
           <!-- 书影音 -->
+          <div class="col-span-2 mt-10 mb-5">我看</div>
+          <div id="letterboxd" class="grid grid-cols-5 gap-4 w-10/12 text-xs">
+          </div>
 
           <!-- 留言板 -->
         </div>
@@ -78,13 +81,15 @@ import "../styles/note.css";
             >
               <img src="/ed.jpg" alt="avater" class="mx-2 my-2 size-36" />
               <div class="text-secondary my-2 mx-2">
-                <div>常居：茶水间</div>
-                <div>ooorange</div>
-                <div>加入时间：2021-06-26</div>
+                <p>常居：茶水间</p>
+                <p>ooorange</p>
+                <p>加入时间：2021-06-26</p>
               </div>
             </div>
 
-            <div class="pl-2 py-2 bg-base-200">普通社畜，三分钟热度</div>
+            <div class="pl-2 py-2 bg-base-200">
+              <p>普通社畜，三分钟热度</p>
+            </div>
             <!-- 我的广播 -->
             <div class="my-2 mastodon_design bg-base-100">
               <div class="ns-container">
@@ -137,4 +142,5 @@ import "../styles/note.css";
   </body>
   <script type="text/javascript" src="src/js/notestock.js"></script>
   <script type="text/javascript" src="src/js/theme.js"></script>
+  <script type="text/javascript" src="src/js/letterboxd.js"></script>
 </html>
