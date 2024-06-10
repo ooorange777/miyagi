@@ -1,6 +1,31 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "关于本站";
+const author = "ooorange";
+const description = "个人博客，记录感想";
 ---
-<BaseLayout pageTitle={pageTitle}>
-</Baselayout>
+
+<BaseLayout pageTitle={pageTitle} author={author} description={description}>
+    <div class="my-10 leading-8" slot="main">
+        <p>本站由Astro 搭建，样式参考了豆瓣。</p>
+        <p>
+            主页 “我看” 数据来源 <a
+                href="https://letterboxd.com/"
+                target="_blank"
+                class="underline text-info">Letterboxd</a
+            >，“我读” 数据来源 <a
+                href="https://goodreads.com/"
+                target="_blank"
+                class="underline text-info">Goodreads</a
+            >，“我听” 数据来源 <a
+                href="https://last.fm/"
+                target="_blank"
+                class="underline text-info">Last.fm</a
+            >，评论及留言板使用 <a
+                href="https://remark42.com/"
+                target="_blank"
+                class="underline text-info">Remark 42</a
+            >。
+        </p>
+    </div>
+</BaseLayout>

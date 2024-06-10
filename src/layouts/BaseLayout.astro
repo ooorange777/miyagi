@@ -1,35 +1,85 @@
 ---
-import Banner from '../components/banner.astro';
-import Navbar from '../components/navbar.astro';
 const { pageTitle } = Astro.props;
+const { author } = Astro.props;
+const { description } = Astro.props;
+import Banner from "../components/banner.astro";
+import Navbar from "../components/navbar.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html data-theme="garden" lang="zh-cn">
-    <head>
-    	<meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/safari-pinned-tab.svg" />
-        <title>{pageTitle} :: No Tomorrow Club</title>
-        <meta name="generator" content={Astro.generator} />
-    </head>
-    <body class="box-border mx-0 my-0 bg-base-100">
-        <div class="mx-10 my-5 grid grid-cols-3 gap-10">
-            <!-- BANNER -->
-    		<Banner />
-			<!-- MAIN BODY -->
-			<div id="main" class="col-span-2">
-				<!-- NAVBAR -->
-				<Navbar />
-			</div>
-      		<!-- SIDE BAR -->
-      		<div id="sidebar">
-				<div class="grid grid-flow-row">
-                    <slot />
+		{
+			pageTitle == "我的主页" ? (
+				<title>NoTomorrow Club</title>
+			) : (
+				<title>{pageTitle} :: NoTomorrow Club</title>
+			)
+		}
+		<meta name="author" content={author} />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<script
+			src="https://v1.hitokoto.cn/?c=a&c=b&c=c&c=d&c=h&c=k&encode=js&select=%23hitokoto"
+			defer></script>
+	</head>
+
+	<body class="box-border mx-0 my-0 bg-base-100">
+		<div class="container max-w-screen-lg mx-auto font-serif">
+			<!-- BANNER BEGIN-->
+			<Banner />
+			<!-- BANNER END -->
+			<div class="grid grid-cols-3 gap-10 text-sm">
+				<!-- MAIN BODY -->
+				<div id="main" class="col-span-2 pr-10">
+					<!-- NAVBAR BEGIN -->
+					<Navbar pageTitle={pageTitle} />
+					<!-- NAVBAR END -->
+					<slot name="main" />
+				</div>
+				<!-- SIDE BAR -->
+				<div id="sidebar">
+					<slot name="side" />
 				</div>
 			</div>
-        </div>
-    </body>
-	<foot>
-	</foot>
+			<!-- FOOTER -->
+			<footer
+				class="grid grid-flow-col justify-between text-xs text-base-content/50 p-2 border-dashed border-t border-base-300"
+			>
+				<div>© 2021-2024 Notomorrow Club</div>
+				<div>
+					Powered by <a
+						href="https://astro.build/"
+						target="_blank"
+						class="text-info/75 underline">Astro</a
+					>, <a
+						href="https://www.tailwindcss.com/"
+						target="_blank"
+						class="text-info/75 underline">Tailwind</a
+					> & <a
+						href="https://daisyui.com/"
+						target="_blank"
+						class="text-info/75 underline">DaisyUI</a
+					>
+				</div>
+				<div>
+					<a href="/about/" class="mx-5">关于本站</a> 联系我: <a
+						href="https://matrix.to/#/@juju:jymuoyu.com/"
+						target="_blank"
+						class="text-info/75 underline mx-1">Matrix</a
+					>
+					<a
+						href="mailto:juju@gmail.com"
+						target="_blank"
+						class="text-info/75 underline">邮箱</a
+					>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../src/js/theme.js"></script>
+	<slot />
 </html>

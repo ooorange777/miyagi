@@ -1,8 +1,36 @@
+---
+const { pageTitle } = Astro.props;
+---
+
 <!-- NAVBAR -->
-<div id="navbar" class="grid grid-flow-col auto-cols-max gap-10">
-    <a href="/" class="hover:text-primary">主页</a>
+<div class="flex flex-row">
+    <img src="/ed.jpg" alt="avater" class="size-10" />
+    <div class="flex flex-col">
+        {
+            pageTitle == "我的主页" ? (
+                <div class="text-lg font-bold text-nowrap ml-2">OOORANGE</div>
+            ) : (
+                <div class="text-lg font-bold text-nowrap ml-2">
+                    {pageTitle}
+                </div>
+            )
+        }
+        <div class="text-xs text-nowrap ml-2 mb-2 text-secondary">
+            <span>「</span><span id="hitokoto"></span><span>」</span>
+        </div>
+    </div>
+</div>
+<div id="navbar" class="grid grid-flow-col auto-cols-max gap-10 ml-12">
+    <a href="/" class="hover:text-primary">我的主页</a>
     <a href="/blog/" class="hover:text-primary">日记</a>
-    <a href="/tags/" class="hover:text-primary">列表</a>
-    <a href="https://f.jymuoyu.com/gallery/9bfzq41qzq/" target="_blank" class="hover:text-primary">相册</a>
-    <a href="https://library.notomorrow.club/" target="_blank" class="hover:text-primary">图书馆</a>
+    <a href="/list/" class="hover:text-primary">列表</a>
+    <a href="/photo/" target="_blank" class="hover:text-primary">相册</a>
+    <a
+        href="https://library.notomorrow.club/"
+        target="_blank"
+        class="hover:text-primary">图书馆</a
+    >
+    <button id="toggle" class="rounded-md border-primary border-2"
+        ><span class="p-1">日夜交替</span></button
+    >
 </div>
