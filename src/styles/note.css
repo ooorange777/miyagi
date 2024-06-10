@@ -1,10 +1,10 @@
 .ns-frame {
   --widget-width: 500px;
   --widget-height: 500px;
-  --title-text-size: 1rem;
+  --title-text-size: 0.875rem;
   --title-padding-size: 20px;
-  --content-text-size: 0.875rem;
-  --content-padding-size: 1.25rem;
+  --content-text-size: 0.75rem;
+  --content-padding-size: 0.5rem;
   --icon-width: 36px;
   --name-size: 0.875rem;
 }
@@ -73,14 +73,12 @@
 
   position: relative;
   max-width: var(--widget-width);
-  height: var(--widget-height);
   margin: auto;
   background: var(--bg-color);
   color: var(--text-color);
 
   .ns-title {
-    padding: 0.5rem;
-    font-size: var(--title-text-size);
+    padding: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
     white-space: nowrap;
@@ -98,10 +96,7 @@
     > div {
       padding: var(--content-padding-size) var(--content-padding-size)
         var(--content-padding-size)
-        calc(
-          var(--content-padding-size) + var(--icon-width) +
-            var(--content-padding-size)
-        );
+        calc(var(--content-padding-size) + var(--content-padding-size));
       position: relative;
       scroll-snap-align: start;
     }

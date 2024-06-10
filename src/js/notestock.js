@@ -103,7 +103,7 @@ var notestock = notestock || {};
                 "view?q=" +
                 encodeURIComponent(target.getAttribute("data-keyword"));
             }
-            titleframe.innerHTML = `<div class="ns-title">${target.getAttribute("data-title")}</div>`;
+            titleframe.innerHTML = `<div class="ns-title text-sm text-accent">${target.getAttribute("data-title")}</div>`;
             titleset = true;
           }
           let obj = document.createElement("div");
@@ -111,9 +111,9 @@ var notestock = notestock || {};
           let published = new Date(status.published);
           let html = `<div class="ns-avatar">`;
           if (status.account.icon_url)
-          html =
-            html +
-            `<div><span class="ns-avatarname">OOORANGE说：</span></div></div>`;
+            html =
+              html +
+              `<div><span class="ns-avatarname">ooorange 说：</span></div></div>`;
           if (status.summary)
             html =
               html +
