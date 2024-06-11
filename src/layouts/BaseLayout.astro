@@ -4,6 +4,7 @@ const { author } = Astro.props;
 const { description } = Astro.props;
 import Banner from "../components/banner.astro";
 import Navbar from "../components/navbar.astro";
+import Theme from "../js/theme.js";
 ---
 
 <!doctype html>
@@ -80,6 +81,8 @@ import Navbar from "../components/navbar.astro";
 			</footer>
 		</div>
 	</body>
-	<script type="text/javascript" src="../../src/js/theme.js"></script>
+	<script>
+		import "../js/theme.js";
+	</script>
 	<slot />
 </html>
