@@ -5,6 +5,7 @@ slug: '2024042801'
 tags: ['戏剧']
 draft: false
 isCJKLanguage: true
+description: '去看了《近乎正常》中文版，从头到尾没能理解里面任何一个人。'
 ---
 去看了《近乎正常》中文版，从头到尾没能理解里面任何一个人。
 
