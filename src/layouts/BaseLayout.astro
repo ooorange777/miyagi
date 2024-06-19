@@ -4,7 +4,6 @@ const { author } = Astro.props;
 const { description } = Astro.props;
 import Banner from "../components/banner.astro";
 import Navbar from "../components/navbar.astro";
-import Theme from "../js/theme.js";
 ---
 
 <!doctype html>
@@ -23,9 +22,6 @@ import Theme from "../js/theme.js";
 		<meta name="author" content={author} />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
-		<script
-			src="https://v1.hitokoto.cn/?c=a&c=b&c=c&c=d&c=h&c=k&encode=js&select=%23hitokoto"
-			defer></script>
 	</head>
 
 	<body class="box-border mx-0 my-0 bg-base-100">
@@ -48,7 +44,7 @@ import Theme from "../js/theme.js";
 			</div>
 			<!-- FOOTER -->
 			<footer
-				class="grid grid-flow-col justify-between text-xs text-base-content/50 p-2 border-dashed border-t border-base-300"
+				class="grid grid-flow-col justify-between text-xs text-base-content/50 p-2 my-8 border-dashed border-t border-base-300"
 			>
 				<div>© 2021-2024 Notomorrow Club</div>
 				<div>

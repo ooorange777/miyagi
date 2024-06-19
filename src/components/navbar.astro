@@ -15,14 +15,13 @@ const { pageTitle } = Astro.props;
                 </div>
             )
         }
-        <div class="text-xs text-nowrap ml-2 mb-2 text-secondary">
-            <span>「</span><span id="hitokoto"></span><span>」</span>
-        </div>
+        <slot name="hitokoto" />
     </div>
 </div>
+
 <div id="navbar" class="grid grid-flow-col auto-cols-max gap-10 ml-12">
     <a href="/" class="hover:text-primary">我的主页</a>
-    <a href="/blog/" class="hover:text-primary">日记</a>
+    <a href="/posts/1" class="hover:text-primary">日记</a>
     <a href="/list/" class="hover:text-primary">列表</a>
     <a href="/photo/" target="_blank" class="hover:text-primary">相册</a>
     <a

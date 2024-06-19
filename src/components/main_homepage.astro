@@ -27,13 +27,23 @@ const posts = await Astro.glob("../pages/posts/*.md");
 </div>
 <div class="col-span-2">
     {
-        posts.slice(0, 4).map((post) => (
-            <article>
-                <p class="font-medium">{post.frontmatter.title}</p>
-                <p>{post.frontmatter.description}</p>
-                <a href={post.url}>Read more</a>
-            </article>
-        ))
+        posts
+            .reverse()
+            .slice(0, 4)
+            .map((post) => (
+                <article>
+                    <a href={post.url}>
+                        <p class="font-bold my-2">{post.frontmatter.title}</p>
+
+                        <p class="text-xs text-base-content/60">
+                            {post.frontmatter.date}
+                        </p>
+                        <p class="text-xs my-1 pb-2 text-base-content/60">
+                            {post.frontmatter.description}
+                        </p>
+                    </a>
+                </article>
+            ))
     }
 </div>
 <!-- 留言板 -->

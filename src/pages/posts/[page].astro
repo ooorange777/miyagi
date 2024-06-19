@@ -1,0 +1,47 @@
+---
+export async function getStaticPaths({ paginate }) {
+    const allPosts = await Astro.glob("../posts/*.md");
+    const postData = [];
+    for (let post of allPosts) {
+        postData.unshift({
+            data: {
+                title: post.frontmatter.title,
+                date: post.frontmatter.date,
+                description: post.frontmatter.description,
+                url: post.url,
+            },
+        });
+    }
+    return paginate(postData, { pageSize: 5 });
+}
+// 所有分页数据都在 "page" 参数中传递
+const { page } = Astro.props;
+const pageTitle = "我的日记";
+const author = "ooorange";
+const description = "个人博客，记录感想";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageTitle={pageTitle} author={author} description={description}>
+    <div slot="main">
+        <div class="span-col-2 mt-8 py-2">
+            {
+                page.data.map(({ data }) => (
+                    <article>
+                        <a href={data.url}>
+                            <p class="font-bold my-2">{data.title}</p>
+                        </a>
+                        <p class="text-xs text-base-content/60">{data.date}</p>
+                        <p class="text-xs my-1 pb-2 text-base-content/60">
+                            {data.description}
+                        </p>
+                    </article>
+                ))
+            }
+            <div class="mt-4 flex flex-row justify-between">
+                {page.url.prev ? <a href={page.url.prev}>上一页</a> : null}
+                {page.url.next ? <a href={page.url.next}>下一页</a> : null}
+            </div>
+        </div>
+    </div>
+</BaseLayout>
