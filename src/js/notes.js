@@ -20,7 +20,7 @@ fetch(url)
       statusframe.className = "mt-2";
       statusframe.classList.add("pb-5");
       statusframe.classList.add("border-solid");
-      statusframe.classList.add("border-t");
+      statusframe.classList.add("border-b");
       statusframe.classList.add("border-base-300");
       title.textContent = "ooorange 说：";
       title.className = "mb-2";

@@ -15,7 +15,9 @@ const { pageTitle } = Astro.props;
                 </div>
             )
         }
-        <slot name="hitokoto" />
+        <slot name="hitokoto">
+            <div class="text-nowrap ml-2 mb-2"> </div>
+        </slot>
     </div>
 </div>
 
