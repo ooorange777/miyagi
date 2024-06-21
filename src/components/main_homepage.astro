@@ -4,24 +4,24 @@ const posts = await Astro.glob("../pages/posts/*.md");
 
 <!-- 书影音 -->
 <div
-    class="col-span-2 mt-10 mb-5 py-2 text-accent border-dotted border-b-2 border-accent"
+    class="col-span-2 mt-10 mb-5 py-2 text-accent text-base border-dotted border-b-2 border-accent"
 >
     我看
 </div>
 <div id="letterboxd" class="grid grid-cols-5 gap-10 text-xs"></div>
 <div
-    class="col-span-2 mt-10 mb-5 py-2 text-accent border-dotted border-b-2 border-accent"
+    class="col-span-2 mt-10 mb-5 py-2 text-accent text-base border-dotted border-b-2 border-accent"
 >
     我读
 </div>
 <div id="goodreads" class="grid grid-cols-5 gap-10 text-xs"></div>
 <div
-    class="col-span-2 mt-10 mb-5 py-2 text-accent border-dotted border-b-2 border-accent"
+    class="col-span-2 mt-10 mb-5 py-2 text-accent text-base border-dotted border-b-2 border-accent"
 >
     我听
 </div>
 <div
-    class="col-span-2 mt-10 mb-5 py-2 text-accent border-dotted border-b-2 border-accent"
+    class="col-span-2 mt-10 mb-5 py-2 text-accent text-base border-dotted border-b-2 border-accent"
 >
     我的日记
 </div>
@@ -33,12 +33,12 @@ const posts = await Astro.glob("../pages/posts/*.md");
             .map((post) => (
                 <article>
                     <a href={post.url}>
-                        <p class="font-bold my-2">{post.frontmatter.title}</p>
+                        <p class="text-sm my-2 text-secondary">{post.frontmatter.title}</p>
 
-                        <p class="text-xs text-base-content/60">
+                        <p class="text-base-content/60">
                             {post.frontmatter.date}
                         </p>
-                        <p class="text-xs my-1 pb-2 text-base-content/60">
+                        <p class="my-1 pb-2 text-base-content/60">
                             {post.frontmatter.description}
                         </p>
                     </a>
@@ -48,7 +48,7 @@ const posts = await Astro.glob("../pages/posts/*.md");
 </div>
 <!-- 留言板 -->
 <div
-    class="col-span-2 mt-10 mb-5 py-2 text-accent border-dotted border-b-2 border-accent"
+    class="col-span-2 mt-10 mb-5 py-2 text-accent text-base border-dotted border-b-2 border-accent"
 >
     留言板
 </div>

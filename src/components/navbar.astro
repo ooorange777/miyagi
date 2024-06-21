@@ -8,9 +8,9 @@ const { pageTitle } = Astro.props;
     <div class="flex flex-col">
         {
             pageTitle == "我的主页" ? (
-                <div class="text-lg font-bold text-nowrap ml-2">OOORANGE</div>
+                <div class="text-2xl font-bold text-nowrap ml-2">OOORANGE</div>
             ) : (
-                <div class="text-lg font-bold text-nowrap ml-2">
+                <div class="text-2xl font-bold text-nowrap ml-2">
                     {pageTitle}
                 </div>
             )
@@ -20,16 +20,16 @@ const { pageTitle } = Astro.props;
 </div>
 
 <div id="navbar" class="grid grid-flow-col auto-cols-max gap-10 ml-12">
-    <a href="/" class="hover:text-primary">我的主页</a>
-    <a href="/posts/1" class="hover:text-primary">日记</a>
-    <a href="/list/" class="hover:text-primary">列表</a>
-    <a href="/photo/" target="_blank" class="hover:text-primary">相册</a>
+    <a href="/" class="text-secondary">我的主页</a>
+    <a href="/posts/1" class="text-secondary">日记</a>
+    <a href="/list/" class="text-secondary">列表</a>
+    <a href="/photo/" target="_blank" class="text-secondary">相册</a>
     <a
         href="https://library.notomorrow.club/"
         target="_blank"
-        class="hover:text-primary">图书馆</a
+        class="text-secondary">图书馆</a
     >
-    <button id="toggle" class="rounded-md border-primary border-2"
+    <button id="toggle" class="bg-primary text-primary-content"
         ><span class="p-1">日夜交替</span></button
     >
 </div>
