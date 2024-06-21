@@ -31,7 +31,7 @@ function rss(url, name) {
         linkElement.setAttribute("target", "_blank");
         imgElement.setAttribute("src", img);
         imgElement.setAttribute("class", "w-20");
-        titleElement.setAttribute("class", "my-5");
+        titleElement.setAttribute("class", "mt-5");
         itemContainer.appendChild(linkElement);
         linkElement.appendChild(imgElement);
         itemContainer.appendChild(titleElement);
