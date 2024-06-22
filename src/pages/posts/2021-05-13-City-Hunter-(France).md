@@ -1,10 +1,10 @@
 ---
-title: City Hunter (France)
+title: "City Hunter (France)"
 date: 2021-05-13T20:31:48+08:00
 slug: 2021051301
-tags: 
-- 电影
+tags: ['记录']
 draft: false
+description: "法国版是我心里最好的翻拍版本"
 isCJKLanguage: true
 layout: ../../layouts/MarkdownLayout.astro
 ---

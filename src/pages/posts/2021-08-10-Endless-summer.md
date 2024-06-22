@@ -4,6 +4,7 @@ date: '2021-08-10'
 slug: '2021081001'
 draft: false
 tags: ['杂谈']
+description: "一年四季裡我最喜歡夏季。"
 isCJKLanguage: true
 layout: ../../layouts/MarkdownLayout.astro
 ---

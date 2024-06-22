@@ -1,16 +1,16 @@
 ---
-title: cowboy bebop
+title: "cowboy bebop"
 date: 2021-05-06T15:56:00+08:00
 slug: 2021050603
-tags: 
-- 动画
+tags: ['记录']
 draft: false
+image:
+    src: /18881_cowboy_bebop.jpg
+    alt: "cowboy bebop"
 isCJKLanguage: true
+description: "see you space cowboy..."
 layout: ../../layouts/MarkdownLayout.astro
 ---
-
-{{< image src="/img/18881_cowboy_bebop.jpg" alt="cowboy bebop" position="center" >}}
-
 前幾年我碰到一夥人，確切的說是三個大人，一個小孩和一條狗，他們居然說自己是賞金獵人，你說好不好笑。
 
 其中一個男人，頂著個雞窩頭，吊兒郎當的，怎麼看都像路邊的混混。還有個裝著機械手的男人，又高又大，倒是有點像。和他們一起的女人看上去也有些手段，不停地向我問東問西，似乎在打探什麼。至於小孩和狗，他們也是賞金獵人？哈哈哈哈哈哈真是笑死我了。

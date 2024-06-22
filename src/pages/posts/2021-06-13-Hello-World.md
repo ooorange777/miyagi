@@ -3,15 +3,10 @@ title: "Hello World"
 date: 2021-06-13T13:00:00+08:00
 slug: 2021061301
 draft: false
-tags:
-- 电影
-- 动画
+tags: ['记录']
 isCJKLanguage: true
 layout: ../../layouts/MarkdownLayout.astro
 ---
-
-
-
 沒想到這部會被引進，要命的是和電影節衝突了，好不容易找了個空檔去看。
 說實話，三足烏再出現的時候我就意識到了。
 前面的鋪墊，我可是一直在罵人。*虛擬世界的“**你**”就可以隨便擺弄嗎！*

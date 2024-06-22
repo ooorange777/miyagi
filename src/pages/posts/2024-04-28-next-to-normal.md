@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownLayout.astro
 title: '近乎正常'
 date: 2024-04-28T20:00:53+08:00
 slug: '2024042801'
-tags: ['Repo']
+tags: ['记录']
 draft: false
 isCJKLanguage: true
 description: '去看了《近乎正常》中文版，从头到尾没能理解里面任何一个人。'
