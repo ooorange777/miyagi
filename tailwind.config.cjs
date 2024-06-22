@@ -6,15 +6,7 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: [
-      "garden",
-      {
-        dim: {
-          ...require("daisyui/src/theming/themes")["dim"],
-          "secondary-content": "oklch(85.5163% .012821 261.069149)",
-          accent: "oklch(42.6213% .074405 224.389184)",
-        },
-      },
-    ],
+    themes: ["garden", "night"],
   },
+  darkMode: ["class", '[data-theme="night"]'],
 };
