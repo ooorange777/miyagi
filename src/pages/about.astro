@@ -6,7 +6,7 @@ const description = "个人博客，记录感想";
 ---
 
 <BaseLayout pageTitle={pageTitle} author={author} description={description}>
-    <div class="my-10 leading-8" slot="main">
+    <div class="my-10 leading-6" slot="main">
         <p>本站由Astro 搭建，样式参考了豆瓣。</p>
         <p>
             主页 “我看” 数据来源 <a
@@ -34,20 +34,20 @@ const description = "个人博客，记录感想";
     </div>
     <div slot="side">
         <div
-        class="grid grid-flow-col auto-cols-auto place-items-start justify-start bg-base-200"
-    >
-        <img src="/ed.jpg" alt="avater" class="mx-2 my-2 size-36" />
-        <div class="my-2 mx-2">
-            <p class="py-px">常居：茶水间</p>
-            <p class="py-px">ooorange</p>
-            <p class="py-px">加入时间：2021-06-26</p>
+            class="grid grid-flow-col auto-cols-auto place-items-start justify-start bg-base-200"
+        >
+            <img src="/ed.jpg" alt="avater" class="mx-2 my-2 size-36" />
+            <div class="my-2 mx-2">
+                <p class="py-px">常居：茶水间</p>
+                <p class="py-px">ooorange</p>
+                <p class="py-px">加入时间：2021-06-26</p>
+            </div>
         </div>
-    </div>
 
-    <div class="pl-2 py-2 bg-base-200 pb-20">
-        <p class="py-px">↑ ↑ ↑ 普通社畜，三分钟热度</p>
-        <p class="py=px">又菜又爱玩，上班摸鱼小能手</p>
-        <p class="py-px">Pokemon Sleep ID: 414228272809</p>
-    </div>
+        <div class="pl-2 py-2 bg-base-200 pb-20">
+            <p class="py-px">↑ ↑ ↑ 普通社畜，三分钟热度</p>
+            <p class="py=px">又菜又爱玩，上班摸鱼小能手</p>
+            <p class="py-px">Pokemon Sleep ID: 414228272809</p>
+        </div>
     </div>
 </BaseLayout>

@@ -6,6 +6,7 @@ tags:
 - 动画
 draft: false
 isCJKLanguage: true
+layout: ../../layouts/MarkdownLayout.astro
 ---
 
 {{< image src="/img/18881_cowboy_bebop.jpg" alt="cowboy bebop" position="center" >}}

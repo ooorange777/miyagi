@@ -6,6 +6,7 @@ tags:
 - 电影
 draft: false
 isCJKLanguage: true
+layout: ../../layouts/MarkdownLayout.astro
 ---
 ## 第一人稱視角的滑稽戰鬥
 

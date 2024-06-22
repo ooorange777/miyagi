@@ -7,6 +7,7 @@ tags:
 - 电影
 - 动画
 isCJKLanguage: true
+layout: ../../layouts/MarkdownLayout.astro
 ---
 
 

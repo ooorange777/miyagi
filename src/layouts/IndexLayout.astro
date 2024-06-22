@@ -8,7 +8,7 @@ import Hitokoto from "../components/hitokoto.astro";
 ---
 
 <!doctype html>
-<html data-theme="garden" lang="zh-cn">
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,6 +23,9 @@ import Hitokoto from "../components/hitokoto.astro";
         <meta name="author" content={author} />
         <meta name="description" content={description} />
         <meta name="generator" content={Astro.generator} />
+        <script>
+            import "../js/theme.js";
+        </script>
     </head>
 
     <body class="box-border mx-0 my-0 bg-base-100">
@@ -80,8 +83,6 @@ import Hitokoto from "../components/hitokoto.astro";
             </footer>
         </div>
     </body>
-    <script>
-        import "../js/theme.js";
-    </script>
+
     <slot />
 </html>

@@ -5,6 +5,7 @@ slug: '2021081001'
 draft: false
 tags: ['杂谈']
 isCJKLanguage: true
+layout: ../../layouts/MarkdownLayout.astro
 ---
 
 一年四季裡我最喜歡夏季。

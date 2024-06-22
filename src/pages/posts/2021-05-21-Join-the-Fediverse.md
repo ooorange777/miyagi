@@ -5,6 +5,7 @@ slug: 2021052102
 tags: ["杂谈", "Fediverse"]
 draft: false
 isCJKLanguage: true
+layout: ../../layouts/MarkdownLayout.astro
 ---
 
 之前也向親友們推薦過幾次長毛象，甚至邀請過朋友註冊Misskey，最後的效果都不理想，沒有人留下來。

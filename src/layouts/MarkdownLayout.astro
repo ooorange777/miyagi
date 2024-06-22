@@ -1,0 +1,114 @@
+---
+const { frontmatter } = Astro.props;
+const author = "ooorange";
+const posts = await Astro.glob("../pages/posts/*.md");
+---
+
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/safari-pinned-tab.svg" />
+        <title>{frontmatter.title} :: NoTomorrow Club</title>
+        <meta name="author" content={author} />
+        <meta name="description" content={frontmatter.description} />
+        <meta name="generator" content={Astro.generator} />
+        <script>
+            import "../js/theme.js";
+        </script>
+    </head>
+    <body class="box-border mx-0 my-0 bg-base-100">
+        <div class="container max-w-screen-lg mx-auto font-serif text-xs">
+            <div class="grid grid-cols-3 gap-10 my-20">
+                <div id="main" class="col-span-2 pr-10">
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-bold text-nowrap ml-2">
+                            {frontmatter.title}
+                        </div>
+                        <div class="ml-2 mt-2 mb-6">
+                            <span class="mx-2"
+                                ><a href="/" class="text-secondary">{author}</a
+                                ></span
+                            >
+                            <span class="mx-2">{frontmatter.date}</span>
+                            <div class="prose prose-gray text-sm pt-10">
+                                <slot />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar">
+                    <div class="grid grid-flow-row">
+                        <!-- 个人简介 -->
+                        <div
+                            class="grid grid-flow-col auto-cols-auto place-items-start justify-start bg-base-200"
+                        >
+                            <img
+                                src="/ed.jpg"
+                                alt="avater"
+                                class="mx-2 my-2 size-36"
+                            />
+                            <div class="my-2 mx-2">
+                                <p class="py-px">常居：茶水间</p>
+                                <p class="py-px">ooorange</p>
+                                <p class="py-px">加入时间：2021-06-26</p>
+                            </div>
+                        </div>
+                        <div class="my-2 mx-2 text-accent text-base">
+                            我的最新日记
+                        </div>
+                        <div class="my-2 mx-2">
+                            {
+                                posts
+                                    .reverse()
+                                    .slice(0, 5)
+                                    .map((post) => (
+                                        <article>
+                                            <a href={post.url}>
+                                                <p class="text-sm my-2 py-4 text-secondary border-solid border-b border-base-300">
+                                                    {post.frontmatter.title}
+                                                </p>
+                                            </a>
+                                        </article>
+                                    ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer
+                class="grid grid-flow-col justify-between text-xs text-base-content/50 p-2 my-8 border-dashed border-t border-base-300"
+            >
+                <div>© 2021-2024 Notomorrow Club</div>
+                <div>
+                    Powered by <a
+                        href="https://astro.build/"
+                        target="_blank"
+                        class="text-secondary/75 underline">Astro</a
+                    >, <a
+                        href="https://www.tailwindcss.com/"
+                        target="_blank"
+                        class="text-secondary/75 underline">Tailwind</a
+                    > & <a
+                        href="https://daisyui.com/"
+                        target="_blank"
+                        class="text-secondary/75 underline">DaisyUI</a
+                    >
+                </div>
+                <div>
+                    <a href="/about/" class="mx-5">关于本站</a> 联系我: <a
+                        href="https://matrix.to/#/@juju:jymuoyu.com/"
+                        target="_blank"
+                        class="text-secondary/75 underline mx-1">Matrix</a
+                    >
+                    <a
+                        href="mailto:juju@gmail.com"
+                        target="_blank"
+                        class="text-secondary/75 underline">邮箱</a
+                    >
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
