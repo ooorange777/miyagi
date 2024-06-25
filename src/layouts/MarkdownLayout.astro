@@ -10,6 +10,12 @@ const posts = await Astro.glob("../pages/posts/*.md");
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/safari-pinned-tab.svg" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="NoTomorrow Club"
+            href={new URL("rss.xml", Astro.site)}
+        />
         <title>{frontmatter.title} :: NoTomorrow Club</title>
         <meta name="author" content={author} />
         <meta name="description" content={frontmatter.description} />
