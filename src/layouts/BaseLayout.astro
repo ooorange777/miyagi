@@ -19,6 +19,12 @@ import Navbar from "../components/navbar.astro";
 				<title>{pageTitle} :: NoTomorrow Club</title>
 			)
 		}
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="NoTomorrow Club"
+			href={new URL("rss.xml", Astro.site)}
+		/>
 		<meta name="author" content={author} />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
