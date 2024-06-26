@@ -54,15 +54,15 @@ const posts = await Astro.glob("../pages/posts/*.md");
 >
     留言板
 </div>
-<script>
-    var remark_config = {
-        host: "https://remark42.notomorrow.club",
-        site_id: "NoTomorrowClub",
-        components: ["embed"],
-        max_shown_comments: 10,
-        theme: "dark",
-        show_email_subscription: true,
-    };
+<script is:inline>
+var remark_config = {
+    host: "https://remark42.notomorrow.club",
+    site_id: "NoTomorrowClub",
+    components: ["embed"],
+    max_shown_comments: 10,
+    theme: "dark",
+    show_email_subscription: true,
+};
 </script>
 <script is:inline>
 !(function (e, n) {
@@ -70,14 +70,14 @@ const posts = await Astro.glob("../pages/posts/*.md");
         var r = n.createElement("script"),
             c = ".js",
             d = n.head || n.body;
-            "noModule" in r
-                ? ((r.type = "module"), (c = ".mjs"))
-                : (r.async = !0),
-                (r.defer = !0),
-                (r.src = remark_config.host + "/web/" + e[o] + c),
-                d.appendChild(r);
-        }
-    })(remark_config.components || ["embed"], document);
+        "noModule" in r
+            ? ((r.type = "module"), (c = ".mjs"))
+            : (r.async = !0),
+            (r.defer = !0),
+            (r.src = remark_config.host + "/web/" + e[o] + c),
+            d.appendChild(r);
+    }
+})(remark_config.components || ["embed"], document);
 </script>
 <div id="remark42"></div>
 
