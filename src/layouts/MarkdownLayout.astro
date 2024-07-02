@@ -43,6 +43,35 @@ const posts = await Astro.glob("../pages/posts/*.md");
                             </div>
                         </div>
                     </div>
+                    <script is:inline>
+                        var remark_config = {
+                            host: "https://remark42.notomorrow.club",
+                            site_id: "NotomorrowClub",
+                            components: ["embed"],
+                            max_shown_comments: 10,
+                            theme: "light",
+                        };
+                    </script>
+                    <script is:inline>
+                        !(function (e, n) {
+                            for (var o = 0; o < e.length; o++) {
+                                var r = n.createElement("script"),
+                                    c = ".js",
+                                    d = n.head || n.body;
+                                "noModule" in r
+                                    ? ((r.type = "module"), (c = ".mjs"))
+                                    : (r.async = !0),
+                                    (r.defer = !0),
+                                    (r.src =
+                                        remark_config.host +
+                                        "/web/" +
+                                        e[o] +
+                                        c),
+                                    d.appendChild(r);
+                            }
+                        })(remark_config.components || ["embed"], document);
+                    </script>
+                    <div id="remark42"></div>
                 </div>
                 <div id="sidebar">
                     <div class="grid grid-flow-row">
