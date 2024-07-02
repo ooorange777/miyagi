@@ -22,8 +22,10 @@ const handleToggleClick = () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
   if (isDark) {
     element.setAttribute("data-theme", "halloween");
+    window.REMARK42.changeTheme("dark");
   } else {
     element.removeAttribute("data-theme");
+    window.REMARK42.changeTheme("light");
   }
 };
 btn.addEventListener("click", handleToggleClick);
