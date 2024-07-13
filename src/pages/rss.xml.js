@@ -15,7 +15,7 @@ export function GET(context) {
     site: context.site,
     // 输出的 xml 中的`<item>`数组
     // 有关使用内容集合和 glob 导入的示例，请参阅“生成`items`”部分
-    items: posts.map((post) => ({
+    items: posts.reverse().map((post) => ({
       title: post.frontmatter.title,
       link: post.url,
       pubDate: post.frontmatter.date,
