@@ -1,14 +1,14 @@
 ---
-title: "cowboy bebop"
+title: 'cowboy bebop'
 date: 2021-05-06T15:56:00+08:00
 slug: 2021050603
 tags: ['记录']
 draft: false
 image:
     src: /18881_cowboy_bebop.jpg
-    alt: "cowboy bebop"
+    alt: 'cowboy bebop'
 isCJKLanguage: true
-description: "see you space cowboy..."
+description: 'see you space cowboy...'
 layout: ../../layouts/MarkdownLayout.astro
 ---
 前幾年我碰到一夥人，確切的說是三個大人，一個小孩和一條狗，他們居然說自己是賞金獵人，你說好不好笑。

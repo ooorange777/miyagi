@@ -1,10 +1,10 @@
 ---
-title: "Zack Snyder's Justice League"
+title: 'Zack Snyder's Justice League'
 date: 2021-05-06T15:57:58+08:00
 slug: 2021050602
 tags: ['记录']
 draft: false
-description: "我确实比较爱扎导"
+description: '我确实比较爱扎导'
 isCJKLanguage: true
 layout: ../../layouts/MarkdownLayout.astro
 ---
