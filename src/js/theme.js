@@ -10,9 +10,11 @@ const theme = (() => {
 if (theme === "light") {
   element.classList.remove("dark");
   element.removeAttribute("data-theme");
+  window.REMARK42.changeTheme("light");
 } else {
   element.classList.add("dark");
   element.setAttribute("data-theme", "halloween");
+  window.REMARK42.changeTheme("dark");
 }
 
 window.localStorage.setItem("theme", theme);
