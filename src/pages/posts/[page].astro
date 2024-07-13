@@ -28,7 +28,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             {
                 page.data.map(({ data }) => (
                     <article>
-                        <a href={data.url}>
+                        <a href={data.url} target="_blank">
                             <p class="text-sm text-secondary my-2">
                                 {data.title}
                             </p>
