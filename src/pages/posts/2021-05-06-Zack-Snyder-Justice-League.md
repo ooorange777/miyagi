@@ -8,6 +8,7 @@ description: '我确实比较爱扎导'
 isCJKLanguage: true
 layout: ../../layouts/MarkdownLayout.astro
 ---
+
 当亚马逊人喊出"We have no fear!" ，我突然明白克苏鲁令人恐惧之处——未知。能在面对敌人时不退缩，封闭神庙时如此果断，但是看到母盒振动时却显示出了紧张害怕。
 
 欣赏一下海王带来的威士忌广告。
