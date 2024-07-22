@@ -3,12 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 export async function getStaticPaths() {
     const allPosts = await Astro.glob("../posts/*.md");
     const uniqueCategories = [
-        ...new Set(allPosts.map((post) => post.frontmatter.categories).flat()),
+        ...new Set(allPosts.map((post) => post.frontmatter.categories).flat())
     ];
-    return uniqueCategories.map((category) => {
-        const filteredPosts = allPosts.filter((post) =>
-            post.frontmatter.categories.includes(category),
-        );
+    return uniqueCategories.map((category) => {const filteredPosts = allPosts.filter((post) => post.frontmatter.categories.includes(category));
         return {
             params: { category },
             props: { posts: filteredPosts },
