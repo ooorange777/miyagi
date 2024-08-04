@@ -2,7 +2,8 @@
 title: 'Tales from the loop'
 date: 2022-04-04T19:50:28+08:00
 slug: '2022040401'
-tags: ['记录']
+tags: ['影视']
+categories: ['书影音']
 description: '《环形物语》在我的待看名单上很久了，应该说Amazon最初预告的时候就add to watch list了，由于各种各样的原因一直没有看。最初对这部电视剧的想法是可能类似于 Looper 这样的设定，毕竟名字都叫循环了，除了时间旅行还能玩出什么花呢。而事实上，故事就如名称——来自回路的故事，所以台版的翻译《回路奇谭》这个名字更加贴切。'
 draft: false
 isCJKLanguage: true

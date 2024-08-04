@@ -3,7 +3,8 @@ title: 'Hello World'
 date: 2021-06-13T13:00:00+08:00
 slug: 2021061301
 draft: false
-tags: ['记录']
+tags: ['影视']
+categories: ['书影音']
 isCJKLanguage: true
 layout: ../../layouts/MarkdownLayout.astro
 ---

@@ -2,7 +2,8 @@
 title: 'cowboy bebop'
 date: 2021-05-06T15:56:00+08:00
 slug: 2021050603
-tags: ['记录']
+tags: ['影视']
+categories: ['书影音']
 draft: false
 image:
     src: /18881_cowboy_bebop.jpg

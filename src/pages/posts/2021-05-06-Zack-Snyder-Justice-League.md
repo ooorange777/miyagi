@@ -1,7 +1,8 @@
 ---
 title: "Zack Snyder's Justice League"
 date: 2021-05-06T15:57:58+08:00
-tags: ['记录']
+tags: ['影视']
+categories: ['书影音']
 draft: false
 slug: 2021050602
 description: '我确实比较爱扎导'
