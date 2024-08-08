@@ -1,9 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const allPosts = await Astro.glob("../posts/*.md");
-const categories = [
-    ...new Set(allPosts.map((post) => post.frontmatter.categories).flat())
-];
+const categories = ["SIFF", "总结", "拯救我的xxx"];
 const pageTitle = "我的列表";
 const author = "ooorange";
 const description = "个人博客，记录感想";
