@@ -1,9 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-const allPosts = await Astro.glob("../posts/*.md");
-const categories = [
-    ...new Set(allPosts.map((post) => post.frontmatter.categories).flat()),
-];
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const categories = ["SIFF", "总结", "拯救我的xxx"];
 const pageTitle = "我的列表";
 const author = "ooorange";
 const description = "个人博客，记录感想";
@@ -16,7 +13,7 @@ const description = "个人博客，记录感想";
                 categories.map((category) => (
                     <li class="list-none m-4 py-4 border-b border-solid border-base-300">
                         <div class="h-20 block">
-                            <div class="mr-2 size-20 bg-primary/50 rounded-lg shadow-lg shadow-secondary float-left">
+                            <div class="mr-2 size-20 bg-primary/50 rounded-lg shadow-lg float-left">
                                 <div class="m-2 pt-2 opacity-30 font-sans text-primary-content text-xl text-balance font-bold rotate-12 leading-tight">
                                     {category}
                                 </div>

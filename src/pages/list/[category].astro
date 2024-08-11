@@ -2,41 +2,49 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 export async function getStaticPaths() {
     const allPosts = await Astro.glob("../posts/*.md");
-    const uniqueCategories = [
-        ...new Set(allPosts.map((post) => post.frontmatter.categories).flat())
+    return [
+        { params: { category: "总结" }, props: { posts: allPosts } },
+        { params: { category: "SIFF" }, props: { posts: allPosts } },
+        { params: { category: "生活" }, props: { posts: allPosts } },
+        { params: { category: "拯救我的xxx" }, props: { posts: allPosts } },
+        { params: { category: "书影音" }, props: { posts: allPosts } },
+        {
+            params: { category: "其他" },
+            props: { posts: allPosts },
+        },
     ];
-    return uniqueCategories.map((category) => {const filteredPosts = allPosts.filter((post) => post.frontmatter.categories.includes(category));
-        return {
-            params: { category },
-            props: { posts: filteredPosts },
-        };
-    });
 }
+
 const { category } = Astro.params;
 const { posts } = Astro.props;
+const filteredPosts = posts.filter((post) =>
+    post.frontmatter.categories?.includes(category),
+);
 const author = "ooorange";
 const description = "个人博客，记录感想";
 ---
 
 <BaseLayout pageTitle={category} author={author} description={description}>
     <div slot="main">
-        {
-            posts.map((post) => (
-                <article>
-                    <a href={post.url} target="_blank">
-                        <p class="text-sm my-2 text-secondary">
-                            {post.frontmatter.title}
-                        </p>
+        <div class="mt-8 py-2">
+            {
+                filteredPosts.map((post) => (
+                    <article>
+                        <a href={post.url} target="_blank">
+                            <p class="text-sm my-2 text-secondary">
+                                {post.frontmatter.title}
+                            </p>
 
-                        <p class="text-base-content/60">
-                            {post.frontmatter.date}
-                        </p>
-                        <p class="my-1 pb-2 text-base-content/60">
-                            {post.frontmatter.description}
-                        </p>
-                    </a>
-                </article>
-            ))
-        }
+                            <p class="text-base-content/60">
+                                {post.frontmatter.date}
+                            </p>
+                            <p class="my-1 pb-2 text-base-content/60">
+                                {post.frontmatter.description}
+                            </p>
+                        </a>
+                    </article>
+                ))
+            }
+        </div>
     </div>
 </BaseLayout>
